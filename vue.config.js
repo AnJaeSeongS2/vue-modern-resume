@@ -1,5 +1,5 @@
 module.exports = {
-  // publicPath      : process.env.NODE_ENV === 'production' ? '/' : '/',
+  publicPath      : process.env.NODE_ENV === 'production' ? 'vue-modern-resume/' : '/',
   css             : { loaderOptions: { css: { url: false } } },
   configureWebpack: (config) => {
     config.module.rules = [
