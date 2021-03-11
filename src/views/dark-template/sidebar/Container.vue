@@ -7,10 +7,10 @@
       <avatar />
       <div class="text-sm-center mb-4 mt-3">
         <h1>
-          Amirreza <span class="light-blue--text text--lighten-3">Nasiri</span>
+          안 <span class="light-blue--text text--lighten-3">재성</span>
         </h1>
         <span>
-          A challenge-loving web developer
+          지속가능한 개발자, 소통이 되는 개발자
         </span>
       </div>
 
@@ -79,22 +79,17 @@ export default {
             {
               name: 'Email',
               icon: 'mdi-email',
-              text: 'hi@amirreza.in',
+              text: 'jindam91@gmail.com',
             },
             {
-              name: 'Website',
-              icon: 'mdi-web',
-              text: 'amirreza.in',
-            },
-            {
-              name: 'Birth Date',
+              name: '생일',
               icon: 'mdi-cake-variant',
-              text: 'Dec 7, 1996',
+              text: '1991. 08. 28',
             },
             {
-              name: 'Habitation',
+              name: '거주지',
               icon: 'mdi-map-marker',
-              text: 'Tabriz, Iran',
+              text: '경기도 성남시 분당구 금곡동',
             },
           ],
         },
@@ -103,73 +98,38 @@ export default {
           items: [
             {
               icon: 'mdi-github-circle',
-              text: 'github.com/AmirrezaNasiri',
-              link: 'https://github.com/AmirrezaNasiri',
-            },
-            {
-              icon: 'mdi-linkedin-box',
-              text: 'linkedin.com/in/amirreza-nasiri',
-              link: 'https://linkedin.com/in/amirreza-nasiri',
-            },
-            {
-              icon: 'mdi-twitter',
-              text: 'twitter.com/Amirreza_Nasiri',
-              link: 'https://twitter.com/Amirreza_Nasiri',
+              text: 'github.com/AnJaeSeongS2',
+              link: 'https://github.com/AnJaeSeongS2',
             },
             {
               icon: 'mdi-instagram',
-              text: 'instagram.com/amirreza.n96',
-              link: 'https://instagram.com/amirreza.n96',
+              text: 'instagram.com/jaeseong__an',
+              link: 'https://www.instagram.com/jaeseong__an/',
             },
           ],
         },
         hobbies: {
           title: 'HOBBIES',
           items: [
-
-            {
-              icon: 'mdi-bullseye',
-              text: 'Getting out of Safe Zone',
-            },
-            {
-              icon: 'mdi-biohazard',
-              text: 'Challenges',
-            },
-            {
-              icon: 'mdi-bike',
-              text: 'Cycling',
-            },
             {
               icon: 'mdi-image-filter-hdr',
-              text: 'Nature',
-            },
-            {
-              icon: 'mdi-auto-fix',
-              text: 'Hacking Stuffs',
-            },
-            {
-              icon: 'mdi-teach',
-              text: 'Teaching',
+              text: '힐링 여행',
             },
             {
               icon: 'mdi-karate',
-              text: 'Sports',
+              text: '적당한 운동',
             },
             {
               icon: 'mdi-music',
-              text: 'Music',
+              text: '음악 감상 (Spotify)',
             },
             {
               icon: 'mdi-account-group',
-              text: 'Leadership',
+              text: 'T.G.WinG 동아리 활동',
             },
             {
               icon: 'mdi-book-open-page-variant',
-              text: 'Books',
-            },
-            {
-              icon: 'mdi-android-debug-bridge',
-              text: 'Tickling Bugs!',
+              text: '개인 공부',
             },
           ],
         },
@@ -177,20 +137,16 @@ export default {
           title: 'LANGUAGES',
           items: [
             {
+              text : 'Korean',
+              value: 100,
+            },
+            {
               text : 'English',
-              value: 70,
+              value: 60,
             },
             {
-              text : 'Turkish',
-              value: 45,
-            },
-            {
-              text : 'Azeri',
-              value: 100,
-            },
-            {
-              text : 'Persian',
-              value: 100,
+              text : 'Japanese',
+              value: 30,
             },
           ],
         },

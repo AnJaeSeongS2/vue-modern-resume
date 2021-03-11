@@ -5,17 +5,17 @@
   >
     <v-card-text>
       <content-section
-        title="Who am I?"
+        title="자기 소개"
       >
-        I'm a developer born in Iran and founder of <a href="http://delix.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=delix">Delix.ir</a>, <a href="https://bytegate.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bytegate">Bytegate.ir</a> and <a href="http://bobet.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bobet">Bobet.ir</a> and co-founder of <a href="https://smo.li/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=smoli">Smo.li</a>.<br>
-        I'm interested and skilled in different topics of Information Technology including programming, web development, and computer and network security.
+        저는 꾸준히 공부하는 것을 습관화 했습니다. 스터디, 교류, 동아리 또한 끊이질 않고 참여하고 있습니다. 이는 팀 차원에서 필요한 개발자는 어떤 부류의 사람일까에 대해 고민한 결과입니다. 제가 만약 팀원을 선택할 수 있다면 어떤 사람을 선택하고 싶을까? 라는 자문을 해보니, 그 사람이 모듈화에 능하고 테스트관리에 능해 지속가능한 개발자 혹 다방면으로 소통이 되는 개발자이길 원하고 있었습니다.
+        따라서 저는 그런 개발자를 목표로 하고 있습니다. 지금의 과정이 향후 몇년 뒤 프로젝트 리더로써 개발과 프로젝트관리 타 팀과의 소통에서 역량을 보여줄 것이라 생각합니다.
       </content-section>
       <content-section
-        v-if="prouds"
-        title="What am I proud of?"
+        v-if="works"
+        title="현업"
       >
         <v-layout
-          v-for="(proud, i) in prouds"
+          v-for="(work, i) in works"
           :key="i"
         >
           <v-flex
@@ -23,7 +23,7 @@
             xs3
           >
             <v-icon right>
-              {{ proud.icon }}
+              {{ work.icon }}
             </v-icon>
           </v-flex>
           <v-flex
@@ -31,15 +31,35 @@
             xs9
           >
             <p>
-              <strong>{{ proud.text }}</strong><br>
-              <small>{{ proud.source }}</small>
+              <strong><a
+                v-if="work.t_href"
+                :href="work.t_href"
+              >{{ work.t_pre }}</a>{{ work.text }}</strong><br>
+              <small>{{ work.source }}</small>
             </p>
           </v-flex>
         </v-layout>
       </content-section>
       <content-section
+        v-if="prouds"
+        title="대외 활동"
+      >
+        <v-layout
+          v-for="(proud, i) in prouds"
+          :key="i"
+        >
+          <v-flex md4>
+            {{ proud.year }}
+          </v-flex>
+          <v-flex md8>
+            <strong v-if="proud.title">{{ proud.title }}</strong><br>
+            <small v-if="proud.description"><a :href="proud.desc_href">{{ proud.description }}</a></small>
+          </v-flex>
+        </v-layout>
+      </content-section>
+      <content-section
         v-if="educations"
-        title="Education"
+        title="공부"
       >
         <v-layout
           v-for="(education, i) in educations"
@@ -62,10 +82,10 @@
       <content-section
         v-if="skills"
         id="to-timeline"
-        title="Skills"
+        title="취득한 기술"
       >
         <template slot="actions">
-          (% are relative not absolute)
+          (% 지표는 progressbar로 표기)
         </template>
         <v-layout wrap>
           <template
@@ -116,35 +136,81 @@ export default {
   name      : 'MainContent',
   components: { ContentSection },
   data      : () => ({
-    prouds: [
+    works: [
       {
-        icon  : 'mdi-help-rhombus-outline',
-        text  : 'Answered 10M+ questions!',
-        source: '(Bytegate.ir post views)',
+        icon  : 'mdi-cloud',
+        t_pre : 'WAS 제품',
+        text  : '의 CloudManager 모듈 개발',
+        source: 'TmaxSoft',
+        t_href: 'https://kr.tmaxsoft.com/product/productView.do?prod_cd=jeus',
       },
       {
-        icon  : 'mdi-library-music',
-        text  : 'Made people enjoy and learn a new language for equivalent of 29+ years (older than myself!)',
-        source: '(Bobet.ir and its channel downloads)',
+        icon  : 'mdi-shield-lock-outline',
+        text  : 'WAS 제품의 Security 모듈 개발 및 유지보수',
+        source: 'TmaxSoft',
       },
       {
-        icon  : 'mdi-timer-sand',
-        text  : 'Saved +110 days of time of students, writers and etc!',
-        source: '(Delix.ir service usages)',
+        icon  : 'mdi-playlist-edit',
+        text  : 'WAS 제품의 ConfigurationManager 모듈 개발 및 유지보수',
+        source: 'TmaxSoft',
       },
       {
-        icon  : 'mdi-account-multiple',
-        text  : 'Tried to cover small part of 7 people expenses.',
-        source: '(My awesome colleagues)',
+        icon  : 'mdi-television-guide',
+        text  : 'WAS 제품의 Webadmin Backend & Frontend 모듈 개발',
+        source: 'TmaxSoft',
+      },
+      {
+        icon  : 'mdi-application-export',
+        t_pre : 'Re-hosting 제품',
+        text  : '의 Webadmin Frontend 신규 개발',
+        source: 'TmaxSoft',
+        t_href: 'https://kr.tmaxsoft.com/product/productView.do?prod_cd=openframe',
       },
     ],
     educations: [
       {
-        from       : '2015',
-        to         : '2019 (not finished yet)',
-        title      : 'Bachelor\'s degree, Information Technology',
-        location   : 'Seraj University',
-        description: 'Became a member of University Academic Association of Computer Science',
+        from       : '2018',
+        to         : '2018 (수료)',
+        title      : '데이터베이스 엔지니어링 향상과정',
+        location   : '쌍용교육센터',
+        description: '',
+      },
+      {
+        from       : '2011',
+        to         : '2016 (학부졸업)',
+        title      : '컴퓨터공학과',
+        location   : '경희대학교',
+        description: '',
+      },
+    ],
+    prouds: [
+      {
+        title      : 'SQLD 자격증 취득',
+        year       : '2019',
+        description: '한국데이터산업진흥원',
+        desc_href  : 'https://www.dataq.or.kr/www/sub/a_04.do',
+      },
+      {
+        title      : '부산 ICT 해카톤',
+        year       : '2016',
+        description: 'NBbangPay 앱 개발',
+        desc_href  : 'https://github.com/AnJaeSeongS2/NBbangPay',
+      },
+      {
+        title      : 'acm-icpc 한국 지역 본선 대회 - 17위',
+        year       : '2015',
+        description: 'ByeongTeuk Jom Team으로 참가',
+        desc_href  : 'http://icpckorea.org/2015-daejeon/regional',
+      },
+      {
+        title      : '지능형 모형차 경진대회 본선 진출',
+        year       : '2015',
+        description: '한양대 ACELab이 주관하는 대회',
+        desc_href  : 'https://github.com/AnJaeSeongS2/SmartModelCarContest2015',
+      },
+      {
+        title: '창조경제 ICT 해커톤',
+        year : '2015',
       },
     ],
     skills: [
