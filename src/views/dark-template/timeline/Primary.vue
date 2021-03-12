@@ -129,15 +129,15 @@ export default {
     items   : [
       {
         detailed: true,
-        year    : '1991',
-        title   : '태어남',
-        html    : '행복한 인생 시작',
+        year    : '1991.08.28',
+        title   : '태어난 날',
+        html    : '행복한 인생의 시작!',
         icon    : 'mdi-cake-variant',
       },
       {
-        year : '2021',
+        year : '2021.12.31',
         title: '현업 히스토리 준비중',
-        html : '아직 작성되지 않음.',
+        html : '아직 작성하지 않음.',
         icon : 'mdi-github-circle',
       },
       // {
