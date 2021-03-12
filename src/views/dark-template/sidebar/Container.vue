@@ -77,7 +77,7 @@ export default {
           title: 'INFO',
           items: [
             {
-              name: 'Email',
+              name: '이메일',
               icon: 'mdi-email',
               text: 'jindam91@gmail.com',
             },

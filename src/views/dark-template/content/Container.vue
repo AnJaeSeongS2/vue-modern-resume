@@ -7,8 +7,10 @@
       <content-section
         title="자기 소개"
       >
-        저는 꾸준히 공부하는 것을 습관화 했습니다. 스터디, 교류, 동아리 또한 끊이질 않고 참여하고 있습니다. 이는 팀 차원에서 필요한 개발자는 어떤 부류의 사람일까에 대해 고민한 결과입니다. 제가 만약 팀원을 선택할 수 있다면 어떤 사람을 선택하고 싶을까? 라는 자문을 해보니, 그 사람이 모듈화에 능하고 테스트관리에 능해 지속가능한 개발자 혹 다방면으로 소통이 되는 개발자이길 원하고 있었습니다.
-        따라서 저는 그런 개발자를 목표로 하고 있습니다. 지금의 과정이 향후 몇년 뒤 프로젝트 리더로써 개발과 프로젝트관리 타 팀과의 소통에서 역량을 보여줄 것이라 생각합니다.
+        저는 꾸준히 공부하는 것을 습관화 했습니다. 스터디, 교류, 동아리 또한 끊이질 않고 참여하고 있습니다.<br>
+        이러한 활동은 팀에 필요한 인재가 되는 길이라 생각합니다. 그런 생각을 한 계기는 몇해전 "팀원을 선택할 수 있다면 어떤 사람과 같이 일하고 싶을까?"라는 자문을 해봤기 때문입니다. 그 답으로 저는 모듈화에 능하고 테스크 관리에 능해 지속가능한 개발자면서, 유기적으로 연결된 지식을 바탕으로 누구와도 소통이 되는 개발자를 원함을 알게됐습니다.<br>
+        이 꾸준한 공부와 대외활동은 좀안가 프로젝트 리더로 활동할 때 도움이 될 것이라 생각합니다. 리더의 업무인 프로젝트관리 및 타 팀과의 소통에서 역량을 보여줄 것이라 생각합니다.<br>
+        그 목표를 위해 최근에는 vue.js의 vuex, scala의 akka의 구조를 기반으로 FW설계 및 구현도 진행하고있고, TDD, DDD를 유념하고 공부하고 모듈간의 관계에 신경쓰며 개발하고 있습니다. 또, 클라우드용 이미지의 빌드 및 배포 자동화도 직접 구성했으며, 사내에 우선 배포중입니다. 이처럼 같이 일하고 싶은 개발자가 되기위해 다방면으로 공부하고 있으며, 공부한 것을 적용해보고 있습니다.
       </content-section>
       <content-section
         v-if="works"
@@ -73,7 +75,12 @@
             <div v-if="education.location">
               <i>{{ education.location }}</i>
             </div>
-            <div v-if="education.description">
+            <div v-if="education.desc_href">
+              <a :href="education.desc_href">
+                {{ education.description }}
+              </a>
+            </div>
+            <div v-else>
               {{ education.description }}
             </div>
           </v-flex>
@@ -169,18 +176,32 @@ export default {
     ],
     educations: [
       {
+        from       : '2019',
+        to         : '2019',
+        title      : '라 스칼라 코딩단 scala with DDD & Cats 오프라인 스터디 참여',
+        description: '라 스칼라 코딩단',
+        desc_href  : 'https://groups.google.com/g/scala-korea',
+      },
+      {
         from       : '2018',
         to         : '2018 (수료)',
         title      : '데이터베이스 엔지니어링 향상과정',
-        location   : '쌍용교육센터',
-        description: '',
+        description: '쌍용교육센터',
+        desc_href  : 'https://www.sist.co.kr/',
       },
       {
         from       : '2011',
-        to         : '2016 (학부졸업)',
+        to         : '현재',
+        title      : 'T.G.WinG 학술동아리 스터디 참여',
+        description: 'T.G.WinG',
+        desc_href  : 'https://github.com/TG-WinG',
+      },
+      {
+        from       : '2011',
+        to         : '2017 (학부졸업)',
         title      : '컴퓨터공학과',
-        location   : '경희대학교',
-        description: '',
+        description: '경희대학교',
+        desc_href  : 'http://ce.khu.ac.kr/',
       },
     ],
     prouds: [
@@ -215,77 +236,77 @@ export default {
     ],
     skills: [
       {
-        title: 'PHP',
-        icon : 'mdi-language-php',
-        value: 95,
-      },
-      {
         title: 'JavaScript',
         icon : 'mdi-language-javascript',
-        value: 80,
-      },
-      {
-        title: 'Laravel Framework',
-        icon : 'mdi-laravel',
-        value: 90,
+        value: 50,
       },
       {
         title: 'Vue.js Framework',
         icon : 'mdi-vuejs',
-        value: 90,
+        value: 40,
       },
       { divider: true },
       {
         title: 'Ubuntu Server',
         icon : 'mdi-ubuntu',
-        value: 70,
-      },
-      {
-        title: 'CentOS Server',
-        icon : 'mdi-linux',
-        value: 47,
+        value: 50,
       },
       {
         title: 'Web Application Security',
         icon : 'mdi-shield-lock',
-        value: 80,
+        value: 50,
       },
       {
         title: 'Test Driven Development',
         icon : 'mdi-test-tube',
-        value: 26,
+        value: 40,
+      },
+      {
+        title: 'Domain Driven Development',
+        icon : 'mdi-test-tube',
+        value: 30,
       },
       {
         title: 'Continuous Integration / Continuous Delivery',
         icon : 'mdi-truck-fast',
-        value: 35,
+        value: 60,
       },
       {
         title: 'Git',
         icon : 'mdi-git',
         value: 67,
       },
+      {
+        title: 'Svn',
+        icon : 'mdi-svn',
+        value: 40,
+      },
       { divider: true },
       {
-        title: 'Hardware Development',
+        title: 'Web Application Server Development',
         icon : 'mdi-chip',
-        value: 29,
+        value: 60,
       },
       {
-        title: 'C/C++',
-        icon : 'mdi-language-cpp',
-        value: 38,
+        title: 'Spring Framework + etc...',
+        icon : 'mdi-spring',
+        value: 60,
+      },
+      {
+        title: 'Java',
+        icon : 'mdi-language-java',
+        value: 75,
+      },
+      {
+        title: 'Scala',
+        icon : 'mdi-language-scala',
+        value: 40,
       },
       { divider: true },
       {
         title: 'Leadership',
         icon : 'mdi-account-group',
         value: 68,
-      },
-      {
-        title: 'Content Marketing (+340 articles)',
-        icon : 'mdi-text',
-        value: 96,
       },
     ],
   }),
