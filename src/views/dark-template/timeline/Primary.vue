@@ -6,7 +6,7 @@
     <v-card-text>
       <content-section
         id="timeline"
-        :title="detailed ? '일생의 경험들' : '현업에서의 경험들'"
+        :title="detailed ? '일생의 경험들' : '업무에서의 경험들'"
       >
         <template slot="actions">
           <div>
@@ -136,7 +136,7 @@ export default {
       },
       {
         year : '2021.12.31',
-        title: '현업 히스토리 준비중',
+        title: '업무 히스토리 준비중',
         html : '아직 작성하지 않음.',
         icon : 'mdi-github-circle',
       },
