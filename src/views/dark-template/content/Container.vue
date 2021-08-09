@@ -7,15 +7,15 @@
       <content-section
         title="자기 소개"
       >
-        저는 꾸준히 폭넓게 공부하는 것을 습관화 했습니다. 또한 스터디, 교류, 동아리 등의 활동도 끊이지 않고 참여하고 있습니다.<br>
-        이 꾸준한 공부와 대외 활동들은 양분이 되어, 팀개발에 시너지를 낼 개발자가 될 것입니다. 그런 개발자는 모듈화에 능하고 테스크 관리에 능해 지속가능한 개발자이면서, 유기적으로 연결된 넓은 지식으로 누구와도 소통이 되는 개발자라고 생각하며, 이를 목표로 삼고 지속 성장중입니다.<br>
-        향후 제가 프로젝트 리더로 활동할 시기가 오면, 이 활동들이 도움이 돼 리더의 업무인 프로젝트관리 및 타 팀과의 소통부분에서 높은 역량을 보여줄 것이라 생각합니다.<br>
-        최근에는 현업에서 vue.js의 vuex, scala의 akka의 구조를 응용해 FW를 설계 및 구현했으며, TDD와 DDD같은 개발 패러다임도 공부해 접목시키고, 모듈간의 관계에도 신경쓰며 개발하고 있으며, 클라우드용 이미지의 빌드 및 배포 자동화도 직접 구성해 관리중입니다. 제가 맡은 모듈 뿐만 아니라 프로젝트의 전체를 체계적으로 관리하려 노력하고있습니다.<br>
-        이처럼 저는 팀개발에 시너지를 내는 개발자를 최우선 목표로 다방면으로 공부하고 있으며, 현업에서도 실 적용하고 있습니다.
+        저는 꾸준히 폭넓게 공부하는 것을 습관화 했고 스터디 참여도 꾸준히 하고 있습니다. 제 본업인 server 개발 뿐만 아니라, cloud, client측 신 기술도 학습하고 있습니다. 예를들면 k8s pattern, flutter, vue.js, 다양한 방법론 등을 학습했습니다. 저는 배운 것을 토대로 규모가 큰 프로젝트의 핵심 개발자가 되는 것이 목표입니다.<br>
+        <br>
+        이 목표를 위해 상황에 맞다면 배운 것을 업무에 적극 반영하고 있습니다. 예를들면 첫째, 신규로 진행했던 프로젝트의 CI/CD를 구축한 것입니다. gitlab + jenkins 기반으로 구축했으며 kube 지원 모듈도 추가 개발하여 도커 이미지 형태로 registry에 배포해 관리중입니다. 둘째, vuex의 설계를 응용해 server측 state 관리 FW를 설계 및 구현해 로직을 더 공통화했습니다. 셋째, 지금은 기존 프로젝트의 개선을 위해 리팩토링을 계획 후 시행중이며, 이슈 발생의 최소화와 트래킹을 더 쉽게 할 수단을 고안했습니다. 라이브 서버 이슈를 최소화하기위해 API-First Design 방법론을 도입하기로 추진했으며, 이슈 트래킹을 원할히 하고자 one spring app을 multi module로 분할하하고 있습니다.<br>
+        <br>
+        이렇게 여러 방면으로 공부하며 일하다보니, 저는 자연스레 맡은 프로젝트 외에도 의존성 있는 프로젝트들 또한 간접적으로나마 관리하게 됐습니다. 이러한 과정을 통해 기술뿐만아니라 잘 짜인 개발 파이프라인에 매력을 느끼게 됐습니다. 따라서, 사람 수에 상관없이 팀 개발을 순조롭게 해줄 개발자를 목표로 다방면으로 지속 성장 중입니다.
       </content-section>
       <content-section
         v-if="works"
-        title="현업"
+        title="업무"
       >
         <v-layout
           v-for="(work, i) in works"
@@ -177,6 +177,13 @@ export default {
     ],
     educations: [
       {
+        from       : '2011',
+        to         : '현재',
+        title      : 'T.G.WinG 학술동아리 스터디 참여 및 방중 프로젝트 코멘터 활동',
+        description: 'T.G.WinG 홈페이지',
+        desc_href  : 'http://tgwing.kr/',
+      },
+      {
         from       : '2019',
         to         : '2019',
         title      : '라 스칼라 코딩단 scala with DDD & Cats 오프라인 스터디 참여',
@@ -189,13 +196,6 @@ export default {
         title      : '데이터베이스 엔지니어링 향상과정',
         description: '쌍용교육센터',
         desc_href  : 'https://www.sist.co.kr/',
-      },
-      {
-        from       : '2011',
-        to         : '현재',
-        title      : 'T.G.WinG 학술동아리 스터디 참여',
-        description: 'T.G.WinG',
-        desc_href  : 'https://github.com/TG-WinG',
       },
       {
         from       : '2011',
@@ -242,9 +242,24 @@ export default {
         value: 50,
       },
       {
+        title: 'TypeScript',
+        icon : 'mdi-language-typescript',
+        value: 60,
+      },
+      {
         title: 'Vue.js Framework',
         icon : 'mdi-vuejs',
         value: 40,
+      },
+      {
+        title: 'Dart',
+        icon : 'logos-dart',
+        value: 25,
+      },
+      {
+        title: 'Flutter Framework',
+        icon : 'logos-flutter',
+        value: 35,
       },
       { divider: true },
       {
@@ -268,33 +283,43 @@ export default {
         value: 30,
       },
       {
+        title: 'API-First Desgin',
+        icon : 'mdi-test-tube',
+        value: 60,
+      },
+      {
         title: 'Continuous Integration / Continuous Delivery',
         icon : 'mdi-truck-fast',
-        value: 60,
+        value: 70,
       },
       {
         title: 'Git',
         icon : 'mdi-git',
-        value: 67,
+        value: 75,
       },
       {
         title: 'Svn',
         icon : 'mdi-svn',
         value: 40,
       },
+      {
+        title: 'Jenkins',
+        icon : 'vscode-icons-file-type-jenkins',
+        value: 60,
+      },
       { divider: true },
       {
         title: 'Web Application Server Development',
         icon : 'mdi-chip',
-        value: 60,
+        value: 65,
       },
       {
-        title: 'Spring Framework + etc...',
+        title: 'Spring Framework 5.x + etc...',
         icon : 'mdi-spring',
-        value: 60,
+        value: 70,
       },
       {
-        title: 'Java',
+        title: 'Java 8',
         icon : 'mdi-language-java',
         value: 75,
       },
@@ -307,7 +332,7 @@ export default {
       {
         title: 'Leadership',
         icon : 'mdi-account-group',
-        value: 68,
+        value: 70,
       },
     ],
   }),

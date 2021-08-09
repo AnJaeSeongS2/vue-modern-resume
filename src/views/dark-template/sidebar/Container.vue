@@ -142,7 +142,7 @@ export default {
             },
             {
               text : 'English',
-              value: 60,
+              value: 55,
             },
             {
               text : 'Japanese',
