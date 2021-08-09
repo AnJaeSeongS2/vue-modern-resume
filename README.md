@@ -2,7 +2,6 @@
   <br>
   <a target="_blank" href="https://anjaeseongs2.github.io/vue-modern-resume/">
     <img src="./src/assets/snapshot_pc.png" alt="PC">
-    <img src="./src/assets/snapshot_mobile.png" alt="Mobile">
   </a>
   <br>
   Jaeseong's Vue Modern Resume
