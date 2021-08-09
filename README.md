@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
   <a target="_blank" href="https://anjaeseongs2.github.io/vue-modern-resume/">
-    <img src="src/assets/snapshot_pc.png.png" alt="PC">
-    <img src="src/assets/snapshot_mobile.png.png" alt="Mobile">
+    <img src="./src/assets/snapshot_pc.png" alt="PC">
+    <img src="./src/assets/snapshot_mobile.png" alt="Mobile">
   </a>
   <br>
   Jaeseong's Vue Modern Resume
